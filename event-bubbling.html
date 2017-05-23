@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+	function changeBgColor(event) {
+		this.style.backgroundColor = "red";
+	}
+	
+	function load(){
+		//document.getElementById("id_name").onClick = changeBgColor;
+		document.getElementById("id_name").addEventListener("click", changeBgColor);
+		document.getElementById("text1").onclick= changeBgColor;
+		document.getElementById("text2").onclick= changeBgColor;
+	}
+	
+	window.addEventListener("load", load);
+	window.addEventListener("click", function(){
+		console.log("clicked on the page");
+	});
+</script>
+</head>
+<body>
+
+<div>
+	<span id="text1">This is first part of the text.</span>
+	<span id="text1">And this is second part of the text.</span>
+	
+	<form>
+		<input id="id_name" type="text"></input>
+	</form>
+	
+</div>
+
+<!-- https://javascript.info/bubbling-and-capturing -->
+</body>
+</html>
