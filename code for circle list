@@ -1,1 +1,84 @@
 
+/*--------------------------------------------------------------------
+ * Step Lists
+ *------------------------------------------------------------------*/
+.list-step, .list-step-center {
+  list-style-type: none;
+  display: table;
+}
+.list-step table, .list-step-center table {
+  width: 100%;
+}
+.list-step li, .list-step-center li {
+  display: table-row;
+  font-family: "Arial", arial sans-serif, sans;
+  margin-bottom: .5em;
+}
+.list-step .step-title, .list-step-center .step-title {
+  display: table-cell;
+  padding-right: 1.5em;
+  white-space: nowrap;
+}
+.list-step .step-info, .list-step-center .step-info {
+  display: table-cell;
+  word-break: break-word;
+}
+.list-step .step-info ol, .list-step-center .step-info ol, .list-step .step-info ul, .list-step-center .step-info ul {
+  font-style: normal;
+  margin-left: 0.6667em;
+}
+@media (min-width: 300px) {
+  .list-step .step-info ol, .list-step-center .step-info ol, .list-step .step-info ul, .list-step-center .step-info ul {
+    margin-left: 1.5em;
+  }
+}
+.list-step .step-info ol li, .list-step-center .step-info ol li, .list-step .step-info ul li, .list-step-center .step-info ul li {
+  display: list-item;
+  word-wrap: normal;
+  word-break: break-word;
+}
+.list-step.bolded-list .step-title, .bolded-list.list-step-center .step-title {
+  font-weight: 700;
+}
+.list-step.bolded-list .step-info, .bolded-list.list-step-center .step-info {
+  font-weight: 400;
+}
+
+.list-step-center .step-title {
+  text-align: right;
+  min-width: 3em;
+  padding-right: 0.25em;
+}
+.list-step-center.bolded-list .step-title {
+  font-weight: 700;
+}
+.list-step-center.bolded-list .step-info {
+  font-weight: 400;
+}
+
+
+/*--------------------------------------------------------------------
+ * Dash Lists
+ *------------------------------------------------------------------*/
+.list-dash {
+  position: relative;
+  list-style-type: none;
+}
+.list-dash > li:before {
+  content: "–";
+  position: absolute;
+  left: -1.5em;
+}
+
+/*--------------------------------------------------------------------
+ * Star Lists
+ *------------------------------------------------------------------*/
+.star-dash {
+  position: relative;
+  list-style-type: none;
+}
+.star-dash > li:before {
+  content: "*";
+  position: absolute;
+  left: -1.5em;
+}
