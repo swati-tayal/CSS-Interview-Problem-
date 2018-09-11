@@ -1,0 +1,20 @@
+- React is a javascript library that is use to build a front end application.
+- class vs. functional components
+- stateful vs. stateless components
+- container vs. presentational components
+
+*********************************************************************************
+What Are Components???
+- Components are self-sustaining, independent micro-entities that describe a part of your UI. 
+- An application's UI can be split up into smaller components where each component has its own code, structure, and API. 
+- The component architecture allows you to think of each piece in isolation.
+- Each component can update everything in its scope without being concerned about how it affects other components.
+- Components are also reusable. If you need the same component in multiple places, that's easy. With the help of JSX syntax, you can declare your components wherever you want them to appear, and that's it. 
+
+**********************************************************************************
+Props and State???
+- Components need data to work with.
+- There are two different ways that you can combine components and data: either as props or state.
+
+PROPS?
+- 
