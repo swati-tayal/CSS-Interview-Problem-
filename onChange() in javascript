@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>Region > Country > Division</title>
+<style type="text/css">
+
+body {
+background: #666;
+}
+#widget {
+	width: 580px;
+	height: 480px;
+	font: normal 10px verdana;
+	text-align: center;
+	margin: 40px auto;
+	border: 5px #aaa;
+	border-style: outset inset inset outset;
+	background: url(http://www.grsites.com/textures/misc/misc142.jpg);
+}
+form {
+	width: 98%;
+	margin: 200px 0 10px 0;
+}
+select {
+	width: 190px;
+	font: normal 11px verdana;
+	color: #fff;
+	background: #000;
+}
+#zip {
+	font: normal 11px verdana;
+}
+#txtregion {
+	width: 98%;
+	height: 16px;
+	font: normal 12px verdana;
+	letter-spacing: .4em;
+	margin: auto;
+	border-bottom: 1px black solid;
+}
+#txtplacename {
+	width: 98%;
+	height: 16px;
+	font: normal 10px verdana;
+	margin: auto;
+}
+
+</style>
+<script type="text/javascript" src="city_state.js"></SCRIPT>
+<script type="text/javascript">
+
+function toggle(val)
+{
+	var zipdiv = document.getElementById('zipdiv');
+	var zipfield = document.getElementById('zip');
+	if (val == 'United States')
+	{
+		zipdiv.style.visibility = 'visible';
+		zipfield.disabled = false;
+	}
+	else
+	{
+		zipdiv.style.visibility = 'hidden';
+		zipfield.disabled = true;
+	}
+}
+
+</SCRIPT>
+</head>
+<body>
+<div id="widget">
+<form>
+
+Country&raquo; <select name="country" size="1" onchange="toggle(options[selectedIndex].value);set_city_state(this,city_state)">
+<option value="" id="" >Choose
+<option value="United States" id="US" >United States
+<option value="United Kingdom" id="UK">United Kingdom
+<option value="Afghanistan" id="AF">Afghanistan
+<option value="Albania" id="AL">Albania
+<option value="Albania" id="DZ">Algeria
+<option value="American Samoa" id="AS">American Samoa
+<option value="Andorra" id="AD">Andorra
+<option value="Angola" id="AO">Angola
+<option value="Anguilla" id="AI">Anguilla
+<option value="Antarctica" id="AQ">Antarctica
+<option value="Antigua and Barbuda" id="AG">Antigua and Barbuda
+<option value="Argentina" id="AR">Argentina
+<option value="Armenia" id="AM">Armenia
+<option value="Aruba" id="AW">Aruba
+<option value="Australia" id="AU">Australia
+<option value="Austria" id="AT">Austria
+<option value="Azerbaijan" id="AZ">Azerbaijan
+<option value="Bahamas" id="BS">Bahamas
+<option value="Bahrain" id="BH">Bahrain
+<option value="Bangladesh" id="BD">Bangladesh
+<option value="Barbados" id="BB">Barbados
+<option value="Belarus" id="BY">Belarus
+<option value="Belgium" id="BE">Belgium
+<option value="Belize" id="BZ">Belize
+<option value="Benin" id="BJ">Benin
+<option value="Bermuda" id="BM">Bermuda
+<option value="Bhutan" id="BT">Bhutan
+<option value="Bolivia" id="BO">Bolivia
+<option value="Bosnia and Herzegovina" id="BA">Bosnia and Herzegovina
+<option value="Botswana" id="BW">Botswana
+<option value="Bouvet Island" id="BV">Bouvet Island
+<option value="Brazil" id="BR">Brazil
+<option value="British Indian Ocean Territory" id="IO">British Indian Ocean Territory
+<option value="Brunei" id="BN">Brunei
+<option value="Bulgaria" id="BG">Bulgaria
+<option value="Burkina Faso" id="BF">Burkina Faso
+<option value="Burundi" id="BI">Burundi
+<option value="Cambodia" id="KH">Cambodia
+<option value="Cameroon" id="CM">Cameroon
+<option value="Canada" id="CA">Canada
+<option value="Cape Verde" id="CV">Cape Verde
+<option value="Cayman Islands" id="KY">Cayman Islands
+<option value="Central African Republic" id="CF">Central African Republic
+<option value="Chad" id="TD">Chad
+<option value="Chile" id="CL">Chile
+<option value="China" id="CN">China
+<option value="Christmas Island" id="CX">Christmas Island
+<option value="Cocos keeling island" id="CC">Cocos ( Keeling ) Islands
+<option value="Colombia" id="CO">Colombia
+<option value="Comoros" id="KM">Comoros
+<option value="Congo" id="CG">Congo
+<option value="Cook Islands" id="CK">Cook Islands
+<option value="Costa Rica" id="CR">Costa Rica
+<option value="Côte d Ivoire" id="CI">Côte d'Ivoire
+<option value="Croatia Hrvatska" id="HR">Croatia (Hrvatska)
+<option value="Cuba" id="CU">Cuba
+<option value="Cyprus" id="CY">Cyprus
+<option value="Czech Republic" id="CZ">Czech Republic
+<option value="Congo DRC" id="CD">Congo (DRC)
+<option value="Denmark" id="DK">Denmark
+<option value="Djibouti" id="DJ">Djibouti
+<option value="Dominica" id="DM">Dominica
+<option value="Dominican Republic" id="DO">Dominican Republic
+<option value="East Timor" id="TP">East Timor
+<option value="Ecuador" id="EC">Ecuador
+<option value="Egypt" id="EG">Egypt
+<option value="El Salvador" id="SV">El Salvador
+<option value="Equatorial Guinea" id="GQ">Equatorial Guinea
+<option value="Eritrea" id="ER">Eritrea
+<option value="Estonia" id="EE">Estonia
+<option value="Ethiopia" id="ET">Ethiopia
+<option value="Falkland Islands Islas Malvinas" id="FK">Falkland Islands (Islas Malvinas)
+<option value="Faroe Islands" id="FO">Faroe Islands
+<option value="Fiji Islands" id="FJ">Fiji Islands
+<option value="Finland" id="FI">Finland
+<option value="France" id="FR">France
+<option value="French Guiana" id="GF">French Guiana
+<option value="French Polynesia" id="PF">French Polynesia
+<option value="French Southern and Antarctic Lands" id="TF">French Southern and Antarctic Lands
+<option value="Gabon" id="GA">Gabon
+<option value="Gambia" id="GM">Gambia
+<option value="Georgia" id="GE">Georgia
+<option value="Germany" id="DE">Germany
+<option value="Ghana" id="GH">Ghana
+<option value="Gibraltar" id="GI">Gibraltar
+<option value="Greece" id="GR">Greece
+<option value="Greenland" id="GL">Greenland
+<option value="Grenada" id="GD">Grenada
+<option value="Guadeloupe" id="GP">Guadeloupe
+<option value="Guam" id="GU">Guam
+<option value="Guatemala" id="GT">Guatemala
+<option value="Guinea" id="GN">Guinea
+<option value="Guinea-Bissau" id="GW">Guinea-Bissau
+<option value="Guyana" id="GY">Guyana
+<option value="Haiti" id="HT">Haiti
+<option value="Heard Island and McDonald Islands" id="HM">Heard Island and McDonald Islands
+<option value="Honduras" id="HN">Honduras
+<option value="Hong Kong SAR" id="HK">Hong Kong SAR
+<option value="Hungary" id="HU">Hungary
+<option value="Iceland" id="IS">Iceland
+<option value="India" id="IN">India
+<option value="Indonesia" id="ID">Indonesia
+<option value="Iran" id="IR">Iran
+<option value="Iraq" id="IQ">Iraq
+<option value="Ireland" id="IE">Ireland
+<option value="Israel" id="IL">Israel
+<option value="Italy" id="IT">Italy
+<option value="Jamaica" id="JM">Jamaica
+<option value="Japan" id="JP">Japan
+<option value="Jordan" id="JO">Jordan
+<option value="Kazakhstan" id="KZ">Kazakhstan
+<option value="Kenya" id="KE">Kenya
+<option value="Kiribati" id="KI">Kiribati
+<option value="Korea" id="KR">Korea
+<option value="Kuwait" id="KW">Kuwait
+<option value="Kyrgyzstan" id="KG">Kyrgyzstan
+<option value="Laos" id="LA">Laos
+<option value="Latvia" id="LV">Latvia
+<option value="Lebanon" id="LB">Lebanon
+<option value="Lesotho" id="LS">Lesotho
+<option value="Liberia" id="LR">Liberia
+<option value="Libya" id="LY">Libya
+<option value="Liechtenstein" id="LI">Liechtenstein
+<option value="Lithuania" id="LT">Lithuania
+<option value="Luxembourg" id="LU">Luxembourg
+<option value="Macao SAR" id="MO">Macao SAR
+<option value="Macedonia, Former Yugoslav Republic of" id="MK">Macedonia, Former Yugoslav Republic of
+<option value="Madagascar" id="MG">Madagascar
+<option value="Malawi" id="MW">Malawi
+<option value="Malaysia" id="MY">Malaysia
+<option value="Maldives" id="MV">Maldives
+<option value="Mali" id="ML">Mali
+<option value="Malta" id="MT">Malta
+<option value="Marshall Islands" id="MH">Marshall Islands
+<option value="Martinique" id="MQ">Martinique
+<option value="Mauritania" id="MR">Mauritania
+<option value="Mauritius" id="MU">Mauritius
+<option value="Mayotte" id="YT">Mayotte
+<option value="Mexico" id="MX">Mexico
+<option value="Micronesia" id="FM">Micronesia
+<option value="Moldova" id="MD">Moldova
+<option value="Monaco" id="MC">Monaco
+<option value="Mongolia" id="MN">Mongolia
+<option value="Montserrat" id="MS">Montserrat
+<option value="Morocco" id="MA">Morocco
+<option value="Mozambique" id="MZ">Mozambique
+<option value="Myanmar" id="MM">Myanmar
+<option value="Namibia" id="NA">Namibia
+<option value="NR" id="NR">Nauru
+<option value="Nepal" id="NP">Nepal
+<option value="Netherlands" id="NL">Netherlands
+<option value="Netherlands Antilles" id="AN">Netherlands Antilles
+<option value="New Caledonia" id="NC">New Caledonia
+<option value="New Zealand" id="NZ">New Zealand
+<option value="Nicaragua" id="NI">Nicaragua
+<option value="Niger" id="NE">Niger
+<option value="Nigeria" id="NG">Nigeria
+<option value="Niue" id="NU">Niue
+<option value="Norfolk Island" id="NF">Norfolk Island
+<option value="North Korea" id="KP">North Korea
+<option value="Northern Mariana Islands" id="MP">Northern Mariana Islands
+<option value="Norway" id="NO">Norway
+<option value="Oman" id="OM">Oman
+<option value="Pakistan" id="PK">Pakistan
+<option value="Palau" id="PW">Palau
+<option value="Panama" id="PA">Panama
+<option value="Papua New Guinea" id="PG">Papua New Guinea
+<option value="Paraguay" id="PY">Paraguay
+<option value="Peru" id="PE">Peru
+<option value="Philippines" id="PH">Philippines
+<option value="Pitcairn Islands" id="PN">Pitcairn Islands
+<option value="Poland" id="PL">Poland
+<option value="Portugal" id="PT">Portugal
+<option value="Puerto Rico" id="PR">Puerto Rico
+<option value="Qatar" id="QA">Qatar
+<option value="Reunion" id="RE">Reunion
+<option value="Romania" id="RO">Romania
+<option value="Russia" id="RU">Russia
+<option value="Rwanda" id="RW">Rwanda
+<option value="Samoa" id="WS">Samoa
+<option value="San Marino" id="SM">San Marino
+<option value="São Tomé and Príncipe" id="ST">São Tomé and Príncipe
+<option value="Saudi Arabia" id="SA">Saudi Arabia
+<option value="Senegal" id="SN">Senegal
+<option value="Serbia and Montenegro" id="YU">Serbia and Montenegro
+<option value="Seychelles" id="SC">Seychelles
+<option value="Sierra Leone" id="SL">Sierra Leone
+<option value="Singapore" id="SG">Singapore
+<option value="Slovakia" id="SK">Slovakia
+<option value="Slovenia" id="SI">Slovenia
+<option value="Solomon Islands" id="SB">Solomon Islands
+<option value="Somalia" id="SO">Somalia
+<option value="South Africa" id="ZA">South Africa
+<option value="South Georgia and the South Sandwich Islands" id="GS">South Georgia and the South Sandwich Islands
+<option value="Spain" id="ES">Spain
+<option value="Sri Lanka" id="LK">Sri Lanka
+<option value="St Helena" id="SH">St. Helena
+<option value="St Kitts and Nevis" id="KN">St. Kitts and Nevis
+<option value="St Lucia" id="LC">St. Lucia
+<option value="St Pierre and Miquelon" id="PM">St. Pierre and Miquelon
+<option value="St Vincent and the Grenadines" id="VC">St. Vincent and the Grenadines
+<option value="Sudan" id="SD">Sudan
+<option value="Suriname" id="SR">Suriname
+<option value="Svalbard and Jan Mayen" id="SJ">Svalbard and Jan Mayen
+<option value="Swaziland" id="SZ">Swaziland
+<option value="Sweden" id="SE">Sweden
+<option value="Switzerland" id="CH">Switzerland
+<option value="Syria" id="SY">Syria
+<option value="Taiwan" id="TW">Taiwan
+<option value="Tajikistan" id="TJ">Tajikistan
+<option value="Tanzania" id="TZ">Tanzania
+<option value="Thailand" id="TH">Thailand
+<option value="Togo" id="TG">Togo
+<option value="Tokelau" id="TK">Tokelau
+<option value="Tonga" id="TO">Tonga
+<option value="Trinidad and Tobago" id="TT">Trinidad and Tobago
+<option value="Tunisia" id="TN">Tunisia
+<option value="Turkey" id="TR">Turkey
+<option value="Turkmenistan" id="TM">Turkmenistan
+<option value="Turks and Caicos_Islands" id="TC">Turks and Caicos Islands
+<option value="Tuvalu" id="TV">Tuvalu
+<option value="Uganda" id="UG">Uganda
+<option value="Ukraine" id="UA">Ukraine
+<option value="United Arab Emirates" id="AE">United Arab Emirates
+<option value="United States Minor Outlying Islands" id="UM">United States Minor Outlying Islands
+<option value="Uruguay" id="UY">Uruguay
+<option value="Uzbekistan" id="UZ">Uzbekistan
+<option value="Vanuatu" id="VU">Vanuatu
+<option value="Vatican City" id="VA">Vatican City
+<option value="Venezuela" id="VE">Venezuela
+<option value="Viet Nam" id="VN">Viet Nam
+<option value="Virgin Islands British" id="VG">Virgin Islands (British)
+<option value="Virgin Islands" id="VI">Virgin Islands
+<option value="Wallis and Futuna" id="WF">Wallis and Futuna
+<option value="Yemen" id="YE">Yemen
+<option value="Zambia" id="ZM">Zambia
+<option value="Zimbabwe" id="ZW">Zimbabwe
+
+</select>
+ City/State&raquo; <select name="city_state" size="1" disabled="disabled" onchange="print_city_state(country,this)"></select>
+
+ 	<div id="zipdiv" style="visibility:hidden;margin-top:20px;">
+ 		Zip: <input id="zip" name="zip" type="text"  size="5" maxlength="5" disabled="disabled">
+</div>
+</form>
+<div id="txtregion"></div>
+<div id="txtplacename"></div>
+</div>
+</body>
+</html>
