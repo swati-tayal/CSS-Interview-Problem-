@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title></title>
+    <style>
+      div.cn {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background: gray;
+        margin: 0 auto;
+      }
+      div.inner {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        background: gold;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="cn">
+    <div class="inner">
+        test for vertical and horizontal center
+    </div>
+   </div>
+  </body>
+</html>
