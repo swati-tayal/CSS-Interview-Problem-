@@ -17,4 +17,86 @@ Props and State???
 - There are two different ways that you can combine components and data: either as props or state.
 
 PROPS?
-- 
+- If components were plain JavaScript functions, then props would be the function input.
+- Going by that analogy, a component accepts an input (what we call props), processes it, and then renders some JSX code.
+- props should be immutable.
+- parent component can pass on whatever data it wants to its children as props, but the child component cannot modify its props. So, if you try to edit the props as I did below, you will get the "Cannot assign to read-only" TypeError.
+
+const Button = (props) => {
+    // props are read only
+    props.count =21;
+.
+}
+
+STATE?
+- component can initialize its state and update it whenever necessary.
+- Its scope is limited to the current component.
+
+**********************************************************************************
+Class Components vs. Functional Components???
+- A React component can be of two types: either a class component or a functional component.
+
+Functional Component
+- For functional component we use Arrow function from ES6.
+- with the help of Arrow Function we can skip 2 words as 'function' and 'return'.
+- Syntax:
+    const func = ({name}) => (<div>Hello, {name}!</div>);
+    
+Class Component
+- The primary reason to choose class components over functional components is that they can have state.
+- There are two ways that you can create a class component. The traditional way is to use React.createClass(). ES6 introduced a syntax sugar that allows you to write classes that extend React.Component. However, both the methods are meant to do the same thing. 
+- Class components can exist without state too.
+- Syntax:
+      class Hello extends React.Component{
+        constructor(props){
+          super(props);
+         }
+         render(){
+          return(
+            <div>
+              Hello {this.props}
+            </div>
+         )}
+      }
+      
+- We define a constructor method that accepts props as input. Inside the constructor, we call super() to pass down whatever is being inherited from the parent class. Here are a few details that you might have missed.
+- Class components should always call the base constructor with props. So we used constructor without state in above mentioned example of the class component.
+- As a best practice, I will recommend using the constructor for all class components.
+- If we will not use super() with constructor() it will genrate error message as "Missing super() call in constructor".
+
+super() vs. super(props)
+- super(props) should be used if you're going to call this.props inside the constructor. 
+- Otherwise, using super() alone is sufficient.
+
+
+**********************************************************************************
+Stateful Components vs. Stateless Components
+- the components that have state and the components that don't. 
+
+Stateful Components
+- it is class component because it have state and it get initialize in constructor().
+- syntax:    
+      constructor(props) {
+        super(props);
+        this.state = { count: 0 };
+      }
+- We've created a state object and initialized it with a count of 0. 
+- The this keyword here refers to the instance of the current component. 
+- Syntax:
+    handleCount(value) {
+        this.setState({count: this.state.count+ value});
+    }
+
+setState??
+- We will not re-render a component without setState. Syntax:-- this.setState({comment: 'Hello'});
+- The only place where you can assign this.state is the constructor.
+- We can use multiple setState in a single component because of calculation for the next state.
+**For better undestending please visit 'https://reactjs.org/docs/state-and-lifecycle.html'
+
+Stateless Components
+-
+**********************************************************************************
+USEFUL LINKS:
+- https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541
+- https://github.com/Pau1fitz/react-spotify
+- https://github.com/gerhardsletten/react-reader
