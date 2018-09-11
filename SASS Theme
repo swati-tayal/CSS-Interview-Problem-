@@ -1,0 +1,162 @@
+$reading-themes: (
+    module: 
+        (   theme-name: "module",
+            theme-color-1: orange, 
+            theme-color-2: yellow, 
+            theme-color-3: blue,
+            header-font: "QueulatHMHCnd"
+        ),
+    selection:  
+        (   theme-name: "selection",
+            theme-color-1: gray, 
+            theme-color-2: red, 
+            theme-color-3: black,
+            header-font: "QueulatHMHCnd"
+        )
+);
+
+@each $key, $theme in $reading-themes {
+    // for each theme key value get is value
+    $theme-name: map-get($theme, theme-name);
+    $theme-color-1: map-get($theme, theme-color-1);
+    $theme-color-2: map-get($theme, theme-color-2);
+    $theme-color-3: map-get($theme, theme-color-3);
+    $header-font: map-get($theme, header-font);
+
+    .theme-#{$header-font} {             //NOTE: Applying to header element
+        font-family: "AvenirPrimaryHMH", Times New Roman, serif;
+        font-style: normal;                
+        font-weight: normal;
+    }
+}
+
+******************************************************************************************
+
+$aa-headers:   "blue" $blue-c40 $blue-c25 $blue-c15 url(../../img/placeholder/se-tri-blue.svg) url(../../img/chapter02/top-bar-blue.png) $blue-c30,
+                "turquoise" $turquoise-c40 $turquoise-c25 $turquoise-c15 url(../../img/placeholder/se-tri-turquoise.svg) url(../../img/chapter02/top-bar-turquoise.png) $turquoise-c30,
+             	"aqua" $aqua-c40 $aqua-c25 $aqua-c15 url(../../img/placeholder/se-tri-aqua.svg) url(../../img/chapter02/top-bar-aqua.png) $aqua-c30,                 
+                "dkorange" $orange-c50 $orange-c45 $orange-s15 url(../../img/placeholder/se-tri-orangedk.svg) url(../../img/chapter02/top-bar-dkorange.png) $orange-c30,
+                "orange" $orange-c40 $orange-c25 $orange-s15 url(../../img/placeholder/se-tri1-orange.svg) url(../../img/chapter02/top-bar-orange.png) $orange-c30;
+
+@each $aa-header in $aa-headers {
+    .aa-header-#{nth($aa-header, 1)}{
+    .aa-header {
+     	background-color: #{nth($aa-header, 4)};
+        color: $white;
+        .top-bar{
+            background-image: #{nth($aa-header, 6)};
+            min-height: 35px;
+            background-color: white;
+        }
+        .row{            
+            background-image:  #{nth($aa-header, 5)};
+			background-color: #{nth($aa-header, 2)};;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-size: 29% auto;
+            padding: 0;
+		.col-xs-12{
+    	 padding-left: 30px;
+         padding-right: 30px;
+		}
+		h1{
+            font-size: $L1-size;
+            line-height: $L1-line-height;
+            font-family: "Serifa W01_65 Bold";
+            margin: 5px 0px;
+            color: #ffffff;
+		}
+        h3{
+            font-size: $L3-size;
+            font-family: $font-sans;
+    		margin: 5px 0px;
+            color:$white;
+            line-height: $L3-line-height;
+		}
+        h3.sub-title{
+            font-size: $L3-size-small;
+            font-family: "Serifa W01_55 Roman";
+        }
+        h5{
+            font-size: $L5-size;
+            font-family: $font-sans;
+    		margin: 5px 0px; 
+            color: $white;
+            font-weight: normal;
+            text-transform: capitalize;
+		}
+        }	
+		.trangle{
+			width: 0;
+			height: 0;
+			border-bottom: 100px solid nth($aa-header, 4);
+			border-left: 200px solid transparent;
+			position: absolute;
+    		right: 433px;
+    		top: 194px;
+		}
+		.trangle-1{
+			width: 0;
+    		height: 0;
+    		border-bottom: 153px solid nth($aa-header, 5);
+    		border-left: 300px solid transparent;
+    		position: absolute;
+    		right: 433px;
+    		top: 141px;
+		}
+        
+    }
+    
+    .notice-note{
+        border-bottom: 10px solid nth($aa-header, 7);
+        margin: 20px 0px;         
+        width: 100%;
+        h4{
+           background: nth($aa-header, 7); 
+           padding: 6px 15px; 
+           img{
+                width: 150px;
+                vertical-align: middle;
+                margin: 0;
+           }
+        }
+        h5{
+            color: nth($aa-header, 7);
+            padding: 20px;
+        }
+        p{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    
+   h5{
+    	color: $red-c45;
+		font-size: $L5-size;
+		font-weight: bold;
+		margin-top: 10px;
+        margin-left: 0;
+	}
+    
+    footer{
+        background-color: #{nth($aa-header, 2)};
+        height: 60px;
+        margin-top: 20px;
+    }
+    
+    @media only screen and (max-width: 480px){
+         .aa-header{
+            .row{
+                width: 100%;
+                h1{
+                    font-size: $L1-size-small;
+                }
+                h3{
+                    font-size: $L3-size-small;
+                }
+            }   
+        }
+        
+    }
+    } 
+}
